@@ -5,7 +5,6 @@ import {getRepos} from "../actions/repos";
 import Repo from "./repo/repo";
 import {setCurrentPage} from "../../reducers/reposReducer";
 import {createPages} from "../../utils/pagesCreator";
-import {Redirect} from "react-router-dom";
 
 const Main = () => {
 
@@ -31,12 +30,6 @@ const Main = () => {
         dispatch(setCurrentPage(1))
         dispatch(getRepos(searchValue, currentPage, perPage))
     }
-
-    // if (isFetchError) {
-    //     return <Redirect to='/error' />
-    // }
-// console.log(repos)
-//     debugger
 
     return (
         <div>
